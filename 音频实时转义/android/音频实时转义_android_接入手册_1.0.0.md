@@ -143,7 +143,7 @@
 
       `getMatchResults()` 方法返回的数据结构如下：
 
-      ```json
+      ```txt
       [{
         // 命中的匹配内容，String 类型
         "hitItemContent": "你好", // 数字等于匹配此字段值为数字字符串，如 "123"	
@@ -157,7 +157,7 @@
 
       `getNumbers()` 方法返回的数据结构如下：
 
-      ```json
+      ```txt
       [{
         // 提取的数字，整数型
         "number": 123,	

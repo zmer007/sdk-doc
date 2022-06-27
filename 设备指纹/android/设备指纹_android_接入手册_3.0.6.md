@@ -10,7 +10,7 @@
 
    2. 在build.gradle中增加依赖配置，配置如下所示：
 
-      ```json
+      ```groovy
       android {
       ……
           defaultConfig {
@@ -32,7 +32,7 @@
 
    在AndroidManifest.xml中添加如下权限：
 
-   ```json
+   ```xml
    <!-- 必选权限 -->
    <uses-permission android:name="android.permission.INTERNET" />
    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -48,7 +48,7 @@
 
    targetSdkVersion大于等于28时， 需在AndroidManifest.xml中增加如下配置：
 
-   ```json
+   ```xml
    <application
        ......
        android:usesCleartextTraffic="true"
@@ -60,7 +60,7 @@
 
    如果项目有设置android:networkSecurityConfig选项，上面配置会失败，所以需要在对应XML中增加如下配置： 
 
-   ```json
+   ```xml
    <network-security-config>
    <domain-config cleartextTrafficPermitted="true">
       <!-- fengkongcloud.com 为默认值，如果通过 option.setUtl 设置的url 为 http 连接（下小节将介绍），需要将此 url，如 proxy.example.com 添加到 domain-config 中 -->
@@ -73,7 +73,7 @@
 
    `proguard-rules.pro` 混淆规则文件中添加如下规则
 
-   ```json
+   ```txt
    -keep class com.ishumei.** {*;}
    ```
 
